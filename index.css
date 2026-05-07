@@ -5,8 +5,6 @@
 }
 
 .main {
-  /* border: 1px solid black;  */
-
   display: grid; 
   justify-content: center;
   align-items: center; 
@@ -16,8 +14,6 @@
 }
 
 .buttons {
-  /* border: 1px solid black;  */
-
   display: flex; 
   align-items: flex-end; 
   justify-content: center; 
@@ -45,8 +41,6 @@
 }
 
 .sorts {
-  /* border: 1px solid black;  */
-
   display: flex;
   align-items: flex-end;
   justify-content: center;
