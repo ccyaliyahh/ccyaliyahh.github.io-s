@@ -1,0 +1,77 @@
+:root {
+  --button-colour: rgb(158, 185, 239);
+  --sort-colour: rgb(191, 195, 238);
+  --main-height: 95vh; 
+}
+
+.main {
+  /* border: 1px solid black;  */
+
+  display: grid; 
+  justify-content: center;
+  align-items: center; 
+
+  width: auto; 
+  height: var(--main-height); 
+}
+
+.buttons {
+  /* border: 1px solid black;  */
+
+  display: flex; 
+  align-items: flex-end; 
+  justify-content: center; 
+
+  width: auto; 
+  height: calc(0.25*var(--main-height)); 
+  gap: 10px; 
+}
+
+.button {
+  background-color: var(--button-colour);
+  border-radius: 30px;
+
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+
+  width: 25vh; 
+  height: 10vh; 
+
+  font-family: "courier new";
+  color: white;
+  font-size: 22px; 
+  font-weight: 700; 
+}
+
+.sorts {
+  /* border: 1px solid black;  */
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  width: auto;
+  height: calc(0.75*var(--main-height));
+  gap: 5px;
+}
+
+.box {
+  background-color: var(--sort-colour); 
+  border-radius: 10px 10px 0px 0px; 
+
+  position: relative; 
+  left: 0; 
+}
+
+.move {
+  animation: move 0.25s forwards;
+}
+@keyframes move {
+  from {
+    left: var(--from); 
+  }
+  to {
+    left: var(--to); 
+  }
+}
