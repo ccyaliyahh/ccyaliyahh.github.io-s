@@ -42,7 +42,7 @@ async function insertionSort(arr) {
 async function selectionSort(arr) {
   for (var i = 0; i < arr.length; i++) {
 
-    // console.log(arr.slice());
+    console.log(arr.slice());
 
     var target = arr[i];
     var index = i;
@@ -50,11 +50,6 @@ async function selectionSort(arr) {
       if (arr[j] < target) {
         target = arr[j];
         index = j;
-      } else {
-        var e1 = document.getElementById(arr[j]);
-        var e2 = document.getElementById(target);
-        await skip(e1, e2); 
-        console.log("skippped"); 
       }
     }
 
@@ -180,6 +175,35 @@ function createButtons(array) {
   }
 }
 
+// function createInfo(array) {
+//   const bg = document.createElement("div");
+//   bg.classList.add("popup"); 
+//   bg.classList.add("hide");
+//   bg.id = "bg"; 
+
+//   const toggle = document.createElement("div"); 
+//   toggle.classList.add("popup"); 
+//   toggle.classList.add("hide"); 
+//   toggle.id = "toggle"; 
+//   toggle.textContent = "X"; 
+
+//   const tabs = document.createElement("div"); 
+//   tabs.classList.add("popup");
+//   tabs.classList.add("hide");
+//   tabs.id = "tabs";
+
+//   for (var i = 0; i < array.length; i++) {
+//     const tab = document.createElement("div");
+//     tab.classList.add("popup");
+//     tab.classList.add("hide");
+//     tab.id = array[i];
+//   }
+
+//   const abouts = document.getElementsByClassName("about");
+//   abouts[0].appendChild(bg);
+//   abouts[0].appendChild(toggle); 
+// }
+
 function shuffleArray(array) {
   var currentIndex = array.length;
   while (currentIndex != 0) {
@@ -202,11 +226,14 @@ var array = [6, 2, 3, 5, 9, 4, 8, 7, 1];
 var sorts = ["bSort", "iSort", "sSort"]; 
 shuffleArray(array); 
 createScreen(array); 
+// createInfo(sorts); 
 
 const bSort = document.getElementById("bSort"); 
 const iSort = document.getElementById("iSort");
 const sSort = document.getElementById("sSort");
 const reset = document.getElementById("reset"); 
+// const info = document.getElementById("info"); 
+// const closeInfo = document.getElementById("toggle"); 
 
 bSort.addEventListener("click", () => {
   bubbleSort(array);
@@ -222,6 +249,18 @@ reset.addEventListener("click", () => {
   shuffleArray(array);
   createScreen(array);
 }); 
+// info.addEventListener("click", () => {
+//   const popups = document.getElementsByClassName("popup");
+//   for (var i = 0; i < popups.length; i++) {
+//     popups[i].classList.remove("hide");
+//   }
+// });
+// closeInfo.addEventListener("click", () => {
+//   const popups = document.getElementsByClassName("popup");
+//   for (var i = 0; i < popups.length; i++) {
+//     popups[i].classList.add("hide");
+//   }
+// });
 bSort.addEventListener("mouseover", () => {
   bSort.style.backgroundColor = "rgb(106, 130, 179)";  
 }); 
@@ -246,3 +285,15 @@ reset.addEventListener("mouseover", () => {
 reset.addEventListener("mouseout", () => {
   reset.style.backgroundColor = "rgb(158, 185, 239)";
 }); 
+// info.addEventListener("mouseover", () => {
+//   info.style.backgroundColor = "rgb(113, 106, 179)";
+// });
+// info.addEventListener("mouseout", () => {
+//   info.style.backgroundColor = "rgb(191, 195, 238)";
+// }); 
+// closeInfo.addEventListener("mouseover", () => {
+//   closeInfo.style.backgroundColor = "rgb(113, 106, 179)";
+// });
+// closeInfo.addEventListener("mouseout", () => {
+//   closeInfo.style.backgroundColor = "rgb(191, 195, 238)";
+// }); 
