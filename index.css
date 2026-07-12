@@ -1,44 +1,132 @@
 :root {
   --button-colour: rgb(158, 185, 239);
   --sort-colour: rgb(191, 195, 238);
-  --bg-colour: rgb(255, 253, 236); 
-  --main-height: 95vh; 
+  --bg-colour: rgb(255, 253, 236);
+  --main-height: 95vh;
+}
+
+#info {
+  background-color: var(--sort-colour);
+  border-radius: 10px;
+
+  width: 15vh; 
+  height: 5vh; 
+
+  position: absolute; 
+  left: 20vw; 
+  top: 8vh; 
+
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+
+  font-family: "courier new";
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#bg {
+  background-color: var(--bg-colour);
+  border-radius: 10px;
+
+  width: 120vh;
+  height: 80vh;
+
+  position: absolute;
+  z-index: 7; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+
+  justify-content: center;
+  align-items: center;
+
+  font-family: "courier new";
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#toggle {
+  background-color: var(--sort-colour);
+  border-radius: 10px;
+
+  width: 4vh;
+  height: 3vh;
+
+  position: absolute;
+  z-index: 8;
+  top: 13vh;
+  left: 80vw;
+
+  font-family: "courier new";
+  text-align: center;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.tab {
+  background-color: var(--sort-colour);
+  border-radius: 10px;
+
+  width: 15vh;
+  height: 5vh;
+
+  position: absolute;
+  z-index: 8;
+  top: 15vh;
+  left: 20vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "courier new";
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.hide {
+  display: none; 
 }
 
 .main {
-  display: grid; 
+  display: grid;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 
-  width: auto; 
-  height: var(--main-height); 
+  width: auto;
+  height: var(--main-height);
 }
 
 .buttons {
-  display: flex; 
-  align-items: flex-end; 
-  justify-content: center; 
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 
-  width: auto; 
-  height: calc(0.25*var(--main-height)); 
-  gap: 10px; 
+  width: auto;
+  height: calc(0.25*var(--main-height));
+  gap: 10px;
 }
 
 .button {
   background-color: var(--button-colour);
   border-radius: 30px;
 
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 25vh; 
-  height: 10vh; 
+  width: 25vh;
+  height: 10vh;
 
   font-family: "courier new";
   color: white;
-  font-size: 22px; 
-  font-weight: 700; 
+  font-size: 22px;
+  font-weight: 700;
 }
 
 .sorts {
@@ -52,21 +140,23 @@
 }
 
 .box {
-  background-color: var(--sort-colour); 
-  border-radius: 10px 10px 0px 0px; 
+  background-color: var(--sort-colour);
+  border-radius: 10px 10px 0px 0px;
 
-  position: relative; 
-  left: 0; 
+  position: relative;
+  left: 0;
 }
 
 .move {
   animation: move 0.25s forwards;
 }
+
 @keyframes move {
   from {
-    left: var(--from); 
+    left: var(--from);
   }
+
   to {
-    left: var(--to); 
+    left: var(--to);
   }
 }
